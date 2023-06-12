@@ -1,7 +1,8 @@
 fn main() {
     // list1();
     // list2();
-    list3();
+    // list3();
+    // list5();
 }
 
 // 変数のスコープが終わると値は開放される
@@ -31,3 +32,19 @@ fn list3() {
 fn print_string(a: &String) {
     println!("{}", a);
 }
+
+// Rust だとコンパイルエラーで実行時のエラーを防げる
+// fn list5() {
+//     let p = get_point();
+//     println!("{} {}", p.x, p.y)
+// }
+
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+// fn get_point<'a>() -> &'a Point {
+//     let p = Point { x: 0, y: 0 };
+//     &p
+// }
