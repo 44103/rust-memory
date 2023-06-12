@@ -3,6 +3,7 @@ fn main() {
     // list2();
     // list3();
     // list5();
+    list6();
 }
 
 // 変数のスコープが終わると値は開放される
@@ -48,3 +49,16 @@ struct Point {
 //     let p = Point { x: 0, y: 0 };
 //     &p
 // }
+
+// 配列を使った可変参照の例
+fn list6() {
+    let mut a = vec![0, 1, 2];
+    add_one(&mut a);
+    println!("{} {} {}", a[0], a[1], a[2]);
+}
+
+fn add_one(a: &mut Vec<i32>) {
+    for i in 0..a.len() {
+        a[i] += 1;
+    }
+}
