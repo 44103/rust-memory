@@ -3,7 +3,8 @@ fn main() {
     // list2();
     // list3();
     // list5();
-    list6();
+    // list6();
+    list7();
 }
 
 // 変数のスコープが終わると値は開放される
@@ -61,4 +62,11 @@ fn add_one(a: &mut Vec<i32>) {
     for i in 0..a.len() {
         a[i] += 1;
     }
+}
+
+fn list7() {
+    let mut a = vec![0, 1, 2];
+    let x = &a[0];
+    // a.clear();
+    println!("{}", x);
 }
